@@ -26,21 +26,31 @@ class BoardTest{
     };
     private final Board board = new Board(grid);
 
+    /**
+     * Do we get the correct delta when moving north?
+     */
     @Test
     void verifyWidth() {
         assertThat(board.getWidth()).isEqualTo(MAX_WIDTH);
     }
+    
+    /**
+     * Do we get the correct delta when moving north?
+     */
     @Test
     void verifyHeight() {
         assertThat(board.getHeight()).isEqualTo(MAX_HEIGHT);
     }
 
+    /**
+     * Do we get the correct delta when moving north?
+     */
     @TestFactory
     Iterable<DynamicTest> verifySquares() {
         return Arrays.asList(
-            testSquareAt(0,0),
-            testSquareAt(1,1),
-            testSquareAt(0,2)
+            testSquareAt(0, 0),
+            testSquareAt(1, 1),
+            testSquareAt(0, 2)
         );
     }
 
