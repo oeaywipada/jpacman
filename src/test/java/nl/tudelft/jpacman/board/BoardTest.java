@@ -16,7 +16,7 @@ import static org.mockito.Mockito.mock;
  * @author Jeroen Roosen 
  */
 
-class BoardTest{
+class BoardTest {
     private static final int MAX_WIDTH = 2;
     private static final int MAX_HEIGHT = 3;
 
@@ -44,6 +44,7 @@ class BoardTest{
 
     /**
      * Do we get the correct delta when moving north?
+     * @return tests for the various places.
      */
     @TestFactory
     Iterable<DynamicTest> verifySquares() {
