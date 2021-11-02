@@ -27,16 +27,16 @@ class BoardTest{
     private final Board board = new Board(grid);
 
     @Test
-    void verifyWidth(){
+    void verifyWidth() {
         assertThat(board.getWidth()).isEqualTo(MAX_WIDTH);
     }
     @Test
-    void verifyHeight(){
+    void verifyHeight() {
         assertThat(board.getHeight()).isEqualTo(MAX_HEIGHT);
     }
 
     @TestFactory
-    Iterable<DynamicTest> verifySquares(){
+    Iterable<DynamicTest> verifySquares() {
         return Arrays.asList(
             testSquareAt(0,0),
             testSquareAt(1,1),
